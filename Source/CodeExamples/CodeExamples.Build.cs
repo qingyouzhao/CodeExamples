@@ -10,6 +10,9 @@ public class CodeExamples : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
+		string[] PublicDependencyEnginePlugin = new string[] {"ProceduralMeshComponent"};
+		PublicDependencyModuleNames.AddRange(PublicDependencyEnginePlugin);
+
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
 		// Uncomment if you are using Slate UI
