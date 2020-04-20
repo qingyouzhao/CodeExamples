@@ -26,8 +26,20 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(EditAnywhere)
-	float MyFloat = 10.f;
+	float MyFloat = 100.f;
 
   UPROPERTY(EditAnywhere)
   double MyDouble = 10.0;
+
+	static const FGuid VersionKey;
+
+	static const FName MyVersionName;
+
+	enum CustomVersion{
+		V1 = 1,
+		V2 = 2,
+		V_Current = V2
+	};
+
+	const CustomVersion MyVersion = CustomVersion::V2;
 };
